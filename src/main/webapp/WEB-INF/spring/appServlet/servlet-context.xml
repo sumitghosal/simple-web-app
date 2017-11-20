@@ -65,7 +65,7 @@
 
 		<security:logout />
 
-	</security:http>
+	</security:http />
 
 	<bean id="authenticationEntryPoint" class="org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint">
 		<constructor-arg name="loginFormUrl" value="/openid_connect_login" />
