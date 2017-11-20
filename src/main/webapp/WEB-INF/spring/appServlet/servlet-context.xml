@@ -60,12 +60,10 @@
 
 	<security:global-method-security pre-post-annotations="enabled" proxy-target-class="true" authentication-manager-ref="authenticationManager"/>
 
-	<security:http auto-config="false" use-expressions="true" entry-point-ref="authenticationEntryPoint"
+	<security:http auto-config="false" use-expressions="true" entry-point-ref="authenticationEntryPoint">
 		<security:access-denied-handler error-page="/#/not-authorized"/>
 
-		<security:logout />
-
-	<security:http />
+	<security:http/>
 
 	<bean id="authenticationEntryPoint" class="org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint">
 		<constructor-arg name="loginFormUrl" value="/openid_connect_login" />
