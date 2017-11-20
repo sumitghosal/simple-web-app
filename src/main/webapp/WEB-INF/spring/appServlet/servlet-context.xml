@@ -66,8 +66,8 @@
 	<security:http/>
 
 	<bean id="authenticationEntryPoint" class="org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint">
-		<constructor-arg name="loginFormUrl" value="/openid_connect_login" />
-	</bean>
+    <constructor-arg value="/#/login" />
+</bean>
 
 	<security:authentication-manager alias="authenticationManager">
 		<security:authentication-provider ref="openIdConnectAuthenticationProvider" />
